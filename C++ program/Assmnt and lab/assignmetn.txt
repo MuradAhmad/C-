@@ -1,0 +1,241 @@
+//Pro 1
+
+#include<iostream>
+using namespace std;
+
+void main()
+
+{
+	int pn=1;
+	for (int i=1; i <=100;i++)
+	
+	{ 
+		if (i%2==0)
+			continue;
+	
+			
+			
+			else if(i%3==0)
+			continue;
+		
+
+		cout<<i<<" ";
+		pn++;
+
+	}
+}
+
+
+
+
+//pro 2
+
+#include <iostream>
+#include <conio.h>
+#include <cstdio>
+
+using namespace std;
+
+void main()
+{
+int x_coordinate;
+int y_coordinate;
+char option='y';
+
+
+while(option!='n')									//	loop continues till user press 'n'
+{
+
+	cout<< "\nEnter X coordinate\n";
+	cin >>x_coordinate;								// ask user to enter x-coordinate
+
+	cout<< "\nEnter Y coordinate\n";
+	cin >>y_coordinate;								// ask user to enter y-coordinate
+
+// ******************************************************************************************************************	
+	// condition for 1st quadrant
+
+	if (x_coordinate>0 && y_coordinate>0)								
+		
+		{	
+			cout<<"\n....Points lies in 1st Quadrant....\n";
+
+		}
+
+// ******************************************************************************************************************
+	// condition for 2nd quadrant
+
+	else if(x_coordinate<0 && y_coordinate>0)								
+		
+		{	
+			cout<<"\n....Points lies in 2nd Quadrant....\n";
+		}
+
+// ******************************************************************************************************************
+	// condition for 3nd quadrant
+
+	else if(x_coordinate<0 && y_coordinate<0)								
+		
+		{	
+			cout<<"\n....Points lies in 3rd Quadrant....\n";
+		}
+
+// ******************************************************************************************************************
+// condition for 4th quadrant
+
+	else if(x_coordinate>0 && y_coordinate<0)								
+		
+		{	
+			cout<<"\n....Points lies in 4th Quadrant....\n";
+
+		}
+		
+// ******************************************************************************************************************
+	// condition for y-axis
+	else if(x_coordinate==0 && y_coordinate!=0)
+		{
+			cout<<"\n....Point lies on Y-axis....\n";
+		}
+// ******************************************************************************************************************
+	// condition for x-axis
+	else if(x_coordinate!=0 && y_coordinate==0)
+		{
+			cout<<"\n....Point lies on X-axis....\n";
+		}
+	else
+		cout<<"\n !!!!!!!!  You Entered Wrong !!!!!!!!.................Try again................";
+// ******************************************************************************************************************
+	
+	cout<<"\n\nPress y to Continue and n for Exit\n";	
+	cin>>option;
+
+
+}// end while loop
+
+}
+
+.........................................................
+//pro 3
+
+#include <iostream>
+using namespace std;
+
+void main()
+
+{
+
+int num_1;
+int num_2;
+int result=0;
+char function;
+char option='y';
+
+
+while(option!='n')								//	loop continues till user press 'n'
+{
+
+	cout<< "\nEnter 1st number\n";
+	cin >>num_1;								// ask user to enter 1st number
+
+	cout<< "\nEnter 2nd number\n";
+	cin >>num_2;								// ask user to enter 2nd number
+
+
+	cout<<"\nEnter 1 for Addition :";
+	cout<<"\nEnter 2 for Subtraction :";
+	cout<<"\nEnter 3 for Multiplication :";
+	cout<<"\nEnter 4 for Division :\n";
+	cin>>function;
+// ******************************************************************************************************************	
+	// condition for addition
+
+	if (function=='1')								
+		
+		{	
+			result=num_1+num_2;
+			cout<<"\nResult of Addition of "<<num_1<<" and "<<num_2<<" is = "<<result;
+
+		}
+
+
+// ******************************************************************************************************************	
+	// condition for subtraction
+
+	else if (function=='2')								
+		
+		{	
+			result=num_1-num_2;
+			cout<<"\nResult of Subtraction of "<<num_1<<" and "<<num_2<<" is = "<<result;
+
+		}
+// ******************************************************************************************************************	
+	// condition for Miltiplication
+
+	else if (function=='3')								
+		
+		{	
+			result=num_1*num_2;
+			cout<<"\nResult of Multiplication of "<<num_1<<" and "<<num_2<<" is = "<<result;
+
+		}
+
+// ******************************************************************************************************************	
+	// condition for Division
+
+	else if (function=='4' && num_2!=0)								
+		
+		{	
+			result=num_1/num_2;
+			cout<<"\nResult of Division of "<<num_1<<" and "<<num_2<<" is = "<<result;
+
+		}
+	else 
+		cout<<"\n.....You Entered Wrong Number.........\n";
+		cout<"........Try Again..............\n";
+
+
+
+
+
+	cout<<"\n\nPress y to Continue and n for Exit\n";	
+	cin>>option;
+
+
+}// end while loop
+
+
+}
+...........................
+//pro 4 
+
+#include <iostream>
+using namespace std;
+
+void main()
+
+{
+
+int num;
+int exponent;
+int result=0;
+int loop=0;
+int temp=0;
+cout<< "\nEnter 1st number\n";
+	cin >>num;								// ask user to enter 1st number
+
+	cout<< "\nEnter 2nd number\n";
+	cin >>exponent;	
+while(loop!=exponent)								//	loop continues till user press 'n'
+{
+
+	temp=num*num;
+	result=num*temp;
+	
+	// ask user to enter 2nd number
+
+loop++;
+	
+}
+cout<<result;
+
+}

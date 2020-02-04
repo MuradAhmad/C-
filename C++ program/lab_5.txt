@@ -1,0 +1,176 @@
+prog1
+#include<iostream>
+using namespace std;
+
+void main()
+
+{
+	int x,y,z;
+	cout<<"Enter three numbers\n";
+	cin>>x>>y>>z;
+
+	int *arr[3];
+	arr[0]=&x;
+	arr[1]=&y;
+	arr[2]=&z;
+	//cout<<arr[0];
+
+		cout<<"Address of X = "<<arr[0]<<"\t\tValue of X after dereferencing is = "<<*arr[0]<<endl<<endl;
+		cout<<"Address of Y = "<<arr[1]<<"\t\tValue of y after dereferencing is = "<<*arr[1]<<endl<<endl;
+		cout<<"Address of Z = "<<arr[2]<<"\t\tValue of Z after dereferencing is = "<<*arr[2]<<endl<<endl;
+
+	//int *ptr1;
+	
+		int *ptr;
+		int *ptr1;
+		//int **ptr1;
+
+		/*ptr=arr[0];
+		for(int i =0;i<=2;i++)
+		{
+			ptr=arr[i];
+			arr[i-1]=arr[i];
+			arr[i]=ptr;
+		
+		}
+		for(int i=0;i<=2;i++)
+		{
+			cout<<*arr[i]<<endl;
+		
+		}*/
+	
+	ptr=&x;
+	ptr1=&y;
+	arr[0]=ptr1;
+	arr[1]=arr[2];
+	arr[2]=ptr;
+
+	cout<<"Value of x after swapping = "<<*arr[0]<<endl;
+	cout<<"Value of y after swapping = "<<*arr[1]<<endl;
+	cout<<"Value of z after swapping = "<<*arr[2]<<endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+prog2
+#include<iostream>
+using namespace std;
+double* max(double*,int);
+void main()
+{
+int size;
+cout<<"Enter size of array\n";
+cin>>size;
+double *arr;
+double *b;
+arr =new double[size]; 
+
+
+cout<<"Enter array elements 1 by 1:\n";
+for(int i=1;i<=size;i++)
+{
+	cin>>arr[i];
+
+
+}
+b=max(arr,size);
+//cout<<b;
+//cout<<"Maximum value is\n";
+cout<<endl<<endl<<endl<<*b<<endl;
+
+}
+double* max(double *arr1,int a)
+{
+	double max=arr1[0];
+	double *temp;
+
+	for(int i=0;i<a;i++)
+	{
+		
+		if(arr1[i]>max)
+			max=arr1[i];
+		//else 
+		
+
+
+	}
+	temp=&max;
+return temp;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pro3
+
+#include<iostream>
+using namespace std;
+
+void main()
+{
+int *a;
+int size;
+cout<<"Enter size of array\n";
+cin>>size;
+a =new int[size]; 
+
+
+cout<<"Enter array elements 1 by 1:\n";
+for(int i=1;i<=size;i++)
+{
+	cin>>a[i];
+
+
+}
+cout<<"Address of a = "<<&a<<endl;
+cout<<"\n\nYour Entered values are\n";
+for(int i=1;i<=size;i++)
+{
+	cout<<a[i]<<endl;
+
+
+}
+delete[] a;
+
+
+}

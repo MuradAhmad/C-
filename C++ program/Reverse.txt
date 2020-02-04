@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+void reverse(char [],int);
+void main(){
+	char a[6];
+	const int size=6;
+	for(int i=0;i<size;i++)
+		cin>>a[i];
+	for(int i=0;i<size;i++)
+		cout<<a[i]<<endl;
+	reverse(a,size);
+
+
+}
+void reverse(char b[],int c){
+	char temp;
+	int a=6;
+	for(int i=0;i<c/2;i++)
+	{
+		temp=b[i];
+		b[i]=b[a-1];
+		b[a-1]=temp;
+		a--;
+	}
+	for(int i=0;i<c;i++)
+		cout<<b[i];
+}
+

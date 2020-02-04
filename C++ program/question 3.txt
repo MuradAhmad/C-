@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+#include<conio.h>
+void reversit(char a[],int l)
+{
+int i,k=l;
+char temp;
+for(i=0;i<l/2;i++)
+{
+temp=a[i];
+a[i]=a[k-1];
+a[k-1]=temp;
+k--;
+}
+}
+void main()
+{
+char c[100];
+int l;
+cout<<"enter the string :"<<endl;
+cin.getline(c,100);
+l=strlen(c);                                                //returns the length of the string
+cout<<"string is "  <<c<<endl<<"and its size is:"<<l<<endl;
+reversit(c,l);
+cout<<"reversed string is : "<<c<<endl;
+getch();
+}
